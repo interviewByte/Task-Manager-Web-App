@@ -14,7 +14,7 @@ const UpdatePassword = () => {
 
     try {
       const res = await axios.put(
-        'http://localhost:5000/api/users/update-password',
+        'https://task-manager-web-app-gules.vercel.app/api/users/update-password',
         { oldPassword, newPassword },
         {
           headers: {

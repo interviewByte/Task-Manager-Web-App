@@ -5,7 +5,7 @@ const TaskList = ({ tasks, setTasks }) => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/tasks/${id}`, {
+      await axios.delete(`https://task-manager-web-app-gules.vercel.app/api/tasks/${id}`, {
         headers: {
           'x-auth-token': localStorage.getItem('token'),
         },
@@ -18,7 +18,7 @@ const TaskList = ({ tasks, setTasks }) => {
 
   const handleComplete = async (id) => {
     try {
-      const res = await axios.put(`http://localhost:5000/api/tasks/${id}`, { status: 'completed' }, {
+      const res = await axios.put(`https://task-manager-web-app-gules.vercel.app/api/tasks/${id}`, { status: 'completed' }, {
         headers: {
           'x-auth-token': localStorage.getItem('token'),
         },
