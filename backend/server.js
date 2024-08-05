@@ -17,11 +17,13 @@ app.use(cors());
 // Connect to MongoDB
 connectDB()
 
+// Health Check Route
+app.get('/', (req, res) => res.json({ msg: 'Backend is hosted and running!' }));
+
 
 // Routes
 app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/tasks', require('./routes/taskRoutes'));
-app.use('/', require('./routes/healthCheckRoutes')); 
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
