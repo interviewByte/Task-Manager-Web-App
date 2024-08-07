@@ -8,7 +8,7 @@ const TaskForm = ({ setTasks }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://task-manager-web-app-gules.vercel.app/api/tasks', { name, description }, {
+      const res = await axios.post('https://task-manager-web-app-hjkn.vercel.app/api/tasks', { name, description }, {
         headers: {
           'x-auth-token': localStorage.getItem('token'),
         },

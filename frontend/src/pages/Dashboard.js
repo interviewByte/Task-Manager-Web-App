@@ -11,7 +11,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const res = await axios.get('https://task-manager-web-app-gules.vercel.app/api/tasks', {
+        const res = await axios.get('https://task-manager-web-app-hjkn.vercel.app/api/tasks', {
           headers: {
             'x-auth-token': localStorage.getItem('token'),
           },

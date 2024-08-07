@@ -13,7 +13,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://task-manager-web-app-gules.vercel.app/api/users/register', { username, email, password });
+      const res = await axios.post('https://task-manager-web-app-hjkn.vercel.app/api/users/register', { username, email, password });
       localStorage.setItem('token', res.data.token);
       toast.success('Registered successfully!');
       setTimeout(() => navigate('/'), 2000); 
